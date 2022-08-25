@@ -1,0 +1,12 @@
+<div class="list">
+  <div class="header">Список книг</div>
+  <div class="body" *ngIf="books">
+    <div class="item" *ngFor="let book of books; trackBy: trackBy; let i = index">
+      <div class="number"> {{i + 1}}. </div>
+      <div class="name">Название: {{ getName(book) }}</div>
+      <div class="authors">Автор: {{ getAuthors(book) }}</div>
+      <div class="status">Статус: {{ getStatus(book) }}</div>
+      <div class="time">Время чтения: {{ getReadingTime(book) }}</div>
+    </div>
+  </div>
+</div>
